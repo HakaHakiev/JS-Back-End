@@ -7,7 +7,7 @@ let filePath = path.normalize(path.join(__dirname, "../views/home/index.html"));
 
 module.exports = (req, res) => {
   const pathname = url.parse(req.url).pathname;
-  console.log(pathname);
+  // console.log(pathname);
 
   if (pathname === "/" && req.method === "GET") {
     fs.readFile(filePath, (err, data) => {
